@@ -103,7 +103,7 @@
       flex-direction: column;
       justify-content: center;
       position: relative;
-      padding: 9rem 6% 6rem;
+      padding: 7rem 6% 4rem;
       overflow: hidden;
     }
 
@@ -154,30 +154,172 @@
       font-family: var(--ff-serif);
       font-size: clamp(3rem, 7vw, 6.5rem);
       font-weight: 400;
-      line-height: 1.06;
+      line-height: 1.15;
       color: var(--white);
-      max-width: 800px;
-      margin-bottom: 1.8rem;
+      max-width: 900px;
+      text-align: center;
+      margin: 0 auto 1.4rem auto;
       animation: fadeUp .9s .1s ease both;
     }
 
     .hero-title em { font-style: italic; color: var(--gold); }
 
-    .hero-body {
-      font-size: 0.95rem;
+    /*.hero-body {
+      font-size: 0.92rem;
       color: var(--text);
-      max-width: 720px;
-      line-height: 1.7;
-      margin: 0 auto 3.2rem auto;
+      max-width: 820px;
+      line-height: 1.5;
+      margin: 0 auto 2rem auto;
       font-weight: 300;
       animation: fadeUp .9s .18s ease both;
-    }
+    } */
+     .hero-body {
+  font-size: 0.95rem;
+  color: var(--text);
+  max-width: 780px; /* bem mais horizontal */
+  line-height: 1.55; /* menos “alto” */
+  margin: 0 auto 1.8rem auto; /* reduz espaço vertical */
+  font-weight: 300;
+  animation: fadeUp .9s .18s ease both;
+  text-align: center; /* melhora estética com logo centralizada */
+     }
+
 
     .hero-actions {
       display: flex;
+      justify-content: center;
       gap: 1.2rem;
       flex-wrap: wrap;
       animation: fadeUp .9s .26s ease both;
+    }
+
+    .hero-proof {
+  margin-top: 1.2rem;
+  font-size: .75rem;
+  color: var(--gray);
+  letter-spacing: .05em;
+    }
+
+    .sobre-highlight {
+  color: var(--gold-pale);
+  font-size: .95rem;
+  margin-bottom: 1.5rem;
+  max-width: 420px;
+    }
+
+    .btn-gold {
+  box-shadow: 0 6px 24px rgba(200,169,81,.25);
+    }
+
+.btn-gold:hover {
+  transform: translateY(-3px) scale(1.02);
+    }
+
+    #wa-chat {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 998;
+  font-family: var(--ff-sans);
+    }
+
+.wa-chat-box {
+  width: 280px;
+  background: var(--black-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,.4);
+  display: none;
+  animation: fadeUp .4s ease;
+    }
+
+.wa-chat-header {
+  background: var(--gold);
+  color: var(--black);
+  padding: .8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .8rem;
+    }
+
+.wa-chat-header button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+    }
+
+.wa-chat-body {
+  padding: 1rem;
+  font-size: .85rem;
+  color: var(--text);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+    }
+
+    .msg {
+  background: rgba(255,255,255,0.04);
+  padding: .5rem .7rem;
+  border-radius: 6px;
+  max-width: 85%;
+    }
+
+.msg.bot {
+  align-self: flex-start;
+    }
+
+.typing {
+  font-size: .8rem;
+  color: var(--gray);
+  font-style: italic;
+  opacity: .7;
+    }
+
+.wa-chat-direct {
+  border-top: 1px solid var(--border);
+  padding: .6rem;
+  text-align: center;
+    }
+
+.wa-chat-direct button {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: .5rem .8rem;
+  font-size: .7rem;
+  cursor: pointer;
+  transition: all .2s;
+    }
+
+.wa-chat-direct button:hover {
+  background: var(--gold);
+  color: var(--black);
+    }
+
+.wa-chat-footer {
+  display: flex;
+  border-top: 1px solid var(--border);
+    }
+
+.wa-chat-footer input {
+  flex: 1;
+  padding: .7rem;
+  border: none;
+  background: transparent;
+  color: var(--white);
+  font-size: .8rem;
+    }
+
+.wa-chat-footer button {
+  background: var(--gold);
+  border: none;
+  padding: 0 .9rem;
+  cursor: pointer;
+  font-size: .75rem;
     }
 
     .btn-gold {
@@ -216,7 +358,7 @@
 
     .btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
 
-    .scroll-indicator {
+    /*.scroll-indicator {
       position: absolute;
       bottom: 2.5rem; left: 6%;
       display: flex;
@@ -224,7 +366,7 @@
       align-items: center;
       gap: .4rem;
       animation: fadeUp .9s .5s ease both;
-    }
+    }*/
 
     .scroll-dot {
       width: 5px; height: 5px;
@@ -657,14 +799,21 @@
     <span class="hero-eyebrow-text"></span>
   </div>
   <h1 class="hero-title">
-    Seus direitos<br />tratados com a seriedade que ele exige<br /><em>— e a estratégia que soluciona.</em>
+    Seus direitos tratados com a seriedade que ele exige<br /><em>— e a estratégia que soluciona.</em>
   </h1>
+  <p class="sobre-highlight">
+  Atuação pautada na técnica jurídica e no compromisso real com o resultado do cliente.
+</p>
   <p class="hero-body">
-    Atuação jurídica estratégica, técnica e humana nas áreas Previdenciária, Trabalhista, Criminal e outras. Seu direito não pode esperar — entre em contato e agende sua consulta.
+    Atendimento jurídico estratégico e humanizado nas áreas Previdenciária, Trabalhista e Criminal. 
+    Fale agora com um advogado e entenda seus direitos com clareza e segurança.
   </p>
   <div class="hero-actions">
-    <a href="https://wa.me/551620162144" target="_blank" class="btn-gold">Fale pelo WhatsApp</a>
+    <a href="https://wa.me/551620162144" target="_blank" class="btn-gold">Falar com advogado agora</a>
     <a href="#areas" class="btn-ghost">Nossas Áreas de atuação</a>
+  </div>
+  <div class="hero-proof">
+  ✔ Atendimento rápido &nbsp;&nbsp; ✔ Sigilo absoluto &nbsp;&nbsp; ✔ Orientação clara
   </div>
   <div class="scroll-indicator">
     <div class="scroll-dot"></div>
@@ -699,7 +848,7 @@
         <h2 class="section-title">Áreas de<br />Atuação</h2>
       </div>
       <p class="section-lead reveal d1" style="max-width:420px;padding-bottom:.5rem">
-        Atendimento personalizado em diversas áreas do direito, com foco nas necessidades de cada cliente e respeito às normas éticas da advocacia.
+        Atuação estratégica para proteger seus direitos com segurança jurídica e orientação clara em cada etapa do processo.
       </p>
     </div>
 
@@ -707,12 +856,12 @@
       <div class="area-card area-featured reveal">
         <span class="area-num">01</span>
         <div class="area-name">DIREITO PREVIDENCIÁRIO</div>
-        <p class="area-desc">Aposentadorias, pensão por morte, benefício por incapacidade, BPC/LOAS e revisão de benefícios junto ao INSS.</p>
+        <p class="area-desc">Conquiste seu benefício com segurança: aposentadorias, pensão por morte, benefício por incapacidade, BPC/LOAS e revisão de benefícios junto ao INSS.</p>
       </div>
       <div class="area-card area-featured reveal d1">
         <span class="area-num">02</span>
         <div class="area-name">DIREITO TRABALHISTA</div>
-        <p class="area-desc">Atuação em rescisão contratual, horas extras, assédio moral, reconhecimento de vínculo empregatício, FGTS e verbas rescisórias.</p>
+        <p class="area-desc">Proteja o que é seu por direito: atuação em rescisão contratual, horas extras, assédio moral, reconhecimento de vínculo empregatício, FGTS e verbas rescisórias.</p>
       </div>
       <div class="area-card area-featured reveal d2">
         <span class="area-num">03</span>
@@ -758,7 +907,7 @@
       O nosso escritório foi constituido com o compromisso de oferecer assessoria jurídica confiável e acessível, pautada pela ética, pela transparência e pelo respeito ao cliente em todas as etapas do processo.
     </p>
     <p class="reveal">
-      Com atuação em dicersas áreas do direito, como Previdenciária, Trabalhista, Criminal, cível, dentre outras, o escritório alia conhecimento técnico ao acompanhamento próximo de cada caso, mantendo o cliente informado do início ao fim.
+      Com atuação em diversas áreas do direito, como Previdenciária, Trabalhista, Criminal, cível, dentre outras, o escritório alia conhecimento técnico ao acompanhamento próximo de cada caso, mantendo o cliente informado do início ao fim.
     </p>
     <p class="reveal">
       Mais do que resolver questões jurídicas, nosso trabalho é orientado pela responsabilidade de cuidar de direitos reais, que afetam vidas reais, sempre oferecendo tratamento humanizado aos clientes.
@@ -780,6 +929,10 @@
       <h2 class="section-title reveal">Fale<br /><em style="font-style:italic;color:var(--gold)">conosco</em></h2>
       <p class="section-lead reveal" style="max-width:380px">
         Entre em contato para expor seu caso. O atendimento é realizado com atenção, discrição e agilidade.
+      </p>
+
+      <p style="margin-top:1rem;color:var(--text);max-width:360px">
+  O contato mais rápido é pelo WhatsApp. Clique abaixo e fale diretamente com o advogado.
       </p>
 
       <div class="contato-channels">
@@ -811,8 +964,8 @@
     </div>
 
     <div class="form-box reveal d1">
-      <div class="form-box-title">Envie uma mensagem</div>
-      <div class="form-box-sub">Preencha abaixo — o retorno será feito pelo WhatsApp ou e-mail.</div>
+      <div class="form-box-title">Prefere escrever? Envie sua mensagem</div>
+      <div class="form-box-sub">Preencha abaixo — o retorno será feito pelo WhatsApp.</div>
       <form onsubmit="handleForm(event)">
         <div class="fg">
           <label>Nome completo</label>
@@ -889,8 +1042,103 @@
     const tel  = f.querySelector('input[type=tel]').value;
     const area = f.querySelector('select').value;
     const msg  = f.querySelector('textarea').value;
-    const text = `Olá, Dr. Cleiton! Me chamo *${nome}*.\n📋 *Área:* ${area || 'Não informada'}\n📞 *Telefone:* ${tel || 'Não informado'}\n💬 *Mensagem:* ${msg}`;
+    const text = `Olá, gostaria de falar com um advogado sobre meu caso.
+
+Nome: ${nome}
+Área: ${area || 'Não informada'}
+Telefone: ${tel || 'Não informado'}
+
+${msg}`;
     window.open(`https://wa.me/551620162144?text=${encodeURIComponent(text)}`, '_blank');
+  }
+</script>
+
+<a href="javascript:void(0)" class="wa-float" onclick="openChat()"></a>
+
+<div id="wa-chat">
+  <div class="wa-chat-box" id="chatBox">
+    <div class="wa-chat-header">
+      <strong>Atendimento Jurídico</strong>
+      <button onclick="closeChat()">×</button>
+    </div>
+
+    <div class="wa-chat-body" id="chatBody">
+      <!-- mensagens entram via JS -->
+    </div>
+
+    <div class="wa-chat-footer">
+      <input type="text" id="chatInput" placeholder="Digite sua dúvida..." />
+      <button onclick="sendToWhats()">Enviar</button>
+    </div>
+
+    <div class="wa-chat-direct">
+      <button onclick="goDirectWhats()">Ir direto ao WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const chatBox = document.getElementById("chatBox");
+  const chatBody = document.getElementById("chatBody");
+
+  function addMessage(text) {
+    const msg = document.createElement("div");
+    msg.className = "msg bot";
+    msg.innerText = text;
+    chatBody.appendChild(msg);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  function showTyping(callback) {
+    const typing = document.createElement("div");
+    typing.className = "typing";
+    typing.innerText = "Digitando...";
+    chatBody.appendChild(typing);
+
+    setTimeout(() => {
+      typing.remove();
+      callback();
+    }, 1200);
+  }
+
+  // abertura automática
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      chatBox.style.display = "block";
+
+      showTyping(() => {
+        addMessage("Olá! 👋");
+        showTyping(() => {
+          addMessage("Qual a sua dúvida jurídica? Posso te ajudar.");
+        });
+      });
+
+    }, 2500);
+  });
+
+  function closeChat() {
+    chatBox.style.display = "none";
+  }
+
+  function openChat() {
+    chatBox.style.display = "block";
+  }
+
+  function sendToWhats() {
+    const input = document.getElementById("chatInput");
+    const text = input.value.trim();
+
+    if (!text) return;
+
+    const message = `Olá, gostaria de tirar uma dúvida:\n\n${text}`;
+    const url = `https://wa.me/551620162144?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+  }
+
+  function goDirectWhats() {
+    const url = `https://wa.me/551620162144?text=${encodeURIComponent("Olá, gostaria de falar com um advogado.")}`;
+    window.open(url, "_blank");
   }
 </script>
 </body>
